@@ -14,10 +14,11 @@ public class SetupCheckerBoard{
 		
 		if(userOpt == 'y'){
 			Board newGame = new Board();
+			//Color pieceColor; 
 			
 			for(int i = 0;i<8;i++){
 				for(int j = 0;j<8;j++)
-				newGame.setSpot(i,j,"_|");
+				newGame.setSpot(i,j,"_");
 			}
 		
 			CheckersPiece[] red = new CheckersPiece[count];
@@ -25,13 +26,13 @@ public class SetupCheckerBoard{
 			for(int i = 0;i<count;i++){
 				red[i] = new CheckersPiece();
 				if(i<4){
-					red[i].makePiece("R|",red[i].getxSpot(i),0);	
+					red[i].makePiece("R",red[i].getxSpot(i),0);	
 				}
 				if(i>=4 && i<8){
-					red[i].makePiece("R|",red[i].getxSpot(i),1);
+					red[i].makePiece("R",red[i].getxSpot(i),1);
 				}
 				if(i>=8){
-					red[i].makePiece("R|",red[i].getxSpot(i),2);
+					red[i].makePiece("R",red[i].getxSpot(i),2);
 				}
 			}
 			
@@ -40,13 +41,13 @@ public class SetupCheckerBoard{
 			for(int i = 0;i<count;i++){
 				blk[i] = new CheckersPiece();
 				if(i<4){
-					blk[i].makePiece("B|",blk[i].getxSpot(i),5);	
+					blk[i].makePiece("B",blk[i].getxSpot(i),5);	
 				}
 				if(i>=4 && i<8){
-					blk[i].makePiece("B|",blk[i].getxSpot(i),6);
+					blk[i].makePiece("B",blk[i].getxSpot(i),6);
 				}
 				if(i>=8){
-					blk[i].makePiece("B|",blk[i].getxSpot(i),7);
+					blk[i].makePiece("B",blk[i].getxSpot(i),7);
 				}
 			}
 			
@@ -58,6 +59,6 @@ public class SetupCheckerBoard{
 			
 			newGame.printBoard();
 			
-	}
-}
+						}
+			}
  }

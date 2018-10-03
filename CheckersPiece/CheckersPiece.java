@@ -5,6 +5,8 @@ public class CheckersPiece{
 	private int xPos,yPos;
 	private int[] xSpot = {1,3,5,7,0,2,4,6,1,3,5,7};
 	
+	enum Color {R,B}
+	
 	public void makePiece(String x, int y, int z){
 		setColor(x);
 		setPos(y,z);
