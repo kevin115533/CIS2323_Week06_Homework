@@ -1,19 +1,19 @@
 package CheckersPiece;
 
 public class CheckersPiece{
-	private char color;
+	private String color;
 	private int xPos,yPos;
 	
-	public void makePiece(char x, int y, int z){
+	public void makePiece(String x, int y, int z){
 		setColor(x);
 		setPos(y,z);
 	}
 
-	public void setColor(char x){
+	public void setColor(String x){
 		color = x;	
 	}
 
-	public char getColor(){
+	public String getColor(){
 		return color;
 	}
 	
@@ -22,12 +22,12 @@ public class CheckersPiece{
 		yPos = y;	
 	}
 	
-	public String getPos(){
+	/*public String getPos(){
 		return xPos + yPos;	
-	}
+	}*/
 	
-	public String printPiece(){
-		return color + xPos + yPos;	
+	public void printPiece(){
+		System.out.println(color + xPos + yPos);	
 	}
 	
 }
