@@ -14,6 +14,12 @@ public class SetupCheckerBoard{
 		
 		if(userOpt == 'y'){
 			Board newGame = new Board();
+			
+			for(int i = 0;i<8;i++){
+				for(int j = 0;j<8;j++)
+				newGame.setSpot(i,j,"  ");
+			}
+			
 			newGame.printBoard();
 		
 			CheckersPiece[] red = new CheckersPiece[count];
@@ -54,6 +60,12 @@ public class SetupCheckerBoard{
 				blk[i].printPiece();
 			}
 			
+			for(int i = 0;i<count;i++){
+				newGame.setSpot(red[i].getxPos(),red[i].getyPos(),red[i].getColor());
+				newGame.setSpot(blk[i].getxPos(),blk[i].getyPos(),blk[i].getColor());
+			}
+			
+			newGame.printBoard();
 			
 	}
 }

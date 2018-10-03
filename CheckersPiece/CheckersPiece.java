@@ -22,9 +22,14 @@ public class CheckersPiece{
 		yPos = y;	
 	}
 	
-	/*public String getPos(){
-		return xPos + yPos;	
-	}*/
+	public int getxPos(){
+		return xPos;
+	}
+	
+	public int getyPos(){
+		return yPos;
+	}
+	
 	
 	public void printPiece(){
 		System.out.println(color + xPos + yPos);	
