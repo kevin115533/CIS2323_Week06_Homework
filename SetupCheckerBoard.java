@@ -21,19 +21,40 @@ public class SetupCheckerBoard{
 			for(int i = 0;i<count;i++){
 				red[i] = new CheckersPiece();
 				if(i<4){
-					red[i].makePiece("R",1,0);	
+					red[i].makePiece("RED",1,0);	
 				}
 				if(i>=4 && i<8){
-					red[i].makePiece("R",1,1);
+					red[i].makePiece("RED",1,1);
 				}
 				if(i>=8){
-					red[i].makePiece("R",1,2);
+					red[i].makePiece("RED",1,2);
+				}
+			}
+			
+			CheckersPiece[] blk = new CheckersPiece[count];
+			
+			for(int i = 0;i<count;i++){
+				blk[i] = new CheckersPiece();
+				if(i<4){
+					blk[i].makePiece("BLK",1,0);	
+				}
+				if(i>=4 && i<8){
+					blk[i].makePiece("BLK",1,1);
+				}
+				if(i>=8){
+					blk[i].makePiece("BLK",1,2);
 				}
 			}
 			
 			for(int i = 0;i<count;i++){
-				red[i].getColor();
+				red[i].printPiece();
 			}
+			
+			for(int i = 0;i<count;i++){
+				blk[i].printPiece();
+			}
+			
+			
 	}
 }
  }
