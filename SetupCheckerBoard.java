@@ -17,23 +17,21 @@ public class SetupCheckerBoard{
 			
 			for(int i = 0;i<8;i++){
 				for(int j = 0;j<8;j++)
-				newGame.setSpot(i,j,"  ");
+				newGame.setSpot(i,j,"_|");
 			}
-			
-			newGame.printBoard();
 		
 			CheckersPiece[] red = new CheckersPiece[count];
 			
 			for(int i = 0;i<count;i++){
 				red[i] = new CheckersPiece();
 				if(i<4){
-					red[i].makePiece("R",1,0);	
+					red[i].makePiece("R|",red[i].getxSpot(i),0);	
 				}
 				if(i>=4 && i<8){
-					red[i].makePiece("R",1,1);
+					red[i].makePiece("R|",red[i].getxSpot(i),1);
 				}
 				if(i>=8){
-					red[i].makePiece("R",1,2);
+					red[i].makePiece("R|",red[i].getxSpot(i),2);
 				}
 			}
 			
@@ -42,23 +40,16 @@ public class SetupCheckerBoard{
 			for(int i = 0;i<count;i++){
 				blk[i] = new CheckersPiece();
 				if(i<4){
-					blk[i].makePiece("B",1,5);	
+					blk[i].makePiece("B|",blk[i].getxSpot(i),5);	
 				}
 				if(i>=4 && i<8){
-					blk[i].makePiece("B",1,6);
+					blk[i].makePiece("B|",blk[i].getxSpot(i),6);
 				}
 				if(i>=8){
-					blk[i].makePiece("B",1,7);
+					blk[i].makePiece("B|",blk[i].getxSpot(i),7);
 				}
 			}
 			
-			for(int i = 0;i<count;i++){
-				red[i].printPiece();
-			}
-			
-			for(int i = 0;i<count;i++){
-				blk[i].printPiece();
-			}
 			
 			for(int i = 0;i<count;i++){
 				newGame.setSpot(red[i].getxPos(),red[i].getyPos(),red[i].getColor());
